@@ -107,8 +107,7 @@
 			<div class="row">
 				<div class="col-md-6 text-center animated wow fadeInLeft">
 					<div class="iphone">
-						<img src="img/iphone_blur.webp" alt="" title="">
-						<img src="img/iphone.webp" class="lazy" alt="" title="">
+						<img src="img/iphone_blur.webp" data-src="img/iphone.webp" class="lazy" alt="" title="">
 					</div>
 				</div>
 				<div class="col-md-6 animated wow fadeInRight">
@@ -312,7 +311,7 @@
 
 		  if ("IntersectionObserver" in window) {
 		    lazyloadImages = document.querySelectorAll(".lazy");
-		    
+
 		    var imageObserver = new IntersectionObserver(function(entries, observer) {
 		      entries.forEach(function(entry) {
 		        if (entry.isIntersecting) {
